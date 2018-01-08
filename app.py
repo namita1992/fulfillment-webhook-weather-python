@@ -50,7 +50,11 @@ def webhook():
 
 
 def processRequest(req):
-    if req.get("result").get("action") != "yahooWeatherForecast":
+    my_previous_action = parameters.get("my-action")
+    if my_action == "PreviousContext";
+        my_action = my_previous_action
+        
+    if my_action != "yahooWeatherForecast":
         return {}
     baseurl = "https://query.yahooapis.com/v1/public/yql?"
     yql_query = makeYqlQuery(req)
